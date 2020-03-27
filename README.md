@@ -21,7 +21,7 @@
 
 <h1>Get started (WebClient)</h1>
 
-- To start the project as well, you'll need to run the following code in every folder (backend, frontend and mobile):
+- To start the project, you'll need to run the following code in every folder (backend, frontend and mobile):
 
 		npm start
 		
