@@ -1,27 +1,28 @@
-const express = require('express');
-const { celebrate, Segments, Joi } = require('celebrate');
+const express = require('express')
 
-const ongMid = require('../src/middlewares/ongMid');
-const incidentMid = require('../src/middlewares/incidentMid');
-const profileMid = require('../src/middlewares/profileMid');
-const sessionMid = require('../src/middlewares/sessionMid');
+const SessionMid = require('./middlewares/SessionMid')
+const ProfileMid = require('./middlewares/ProfileMid')
+const OngMid = require('./middlewares/OngMid')
+const IncidentMid = require('./middlewares/IncidentMid')
+const AuthMid = require('./middlewares/AuthMid')
 
-const OngController = require('./controllers/OngController');
-const IncidentController = require('./controllers/IncidentController');
-const ProfileController = require('./controllers/ProfileController');
-const SessionController = require('./controllers/SessionController');
- 
-const routes = express.Router();
+const OngController = require('./controllers/OngController')
+const IncidentController = require('./controllers/IncidentController')
+const ProfileController = require('./controllers/ProfileController')
+const SessionController = require('./controllers/SessionController')
 
-routes.post('/session', sessionMid.index(), SessionController.create);
+const routes = express.Router()
 
-routes.get('/ongs', OngController.index);
-routes.post('/ongs', ongMid.create(), OngController.create);
+routes.post('/session', SessionMid.index(), SessionController.create)
 
-routes.get('/profile', profileMid.index(), ProfileController.index);
+routes.get('/ongs', OngController.index)
+routes.post('/ongs', OngMid.create(), OngController.create)
 
-routes.get('/incidents', incidentMid.index(), IncidentController.index);
-routes.post('/incidents', incidentMid.create(), IncidentController.create);
-routes.delete('/incidents/:id', incidentMid.delete(), IncidentController.delete);
+routes.get('/profile', ProfileMid.index(), AuthMid, ProfileController.index) 
 
-module.exports = routes;
+routes.get('/incidents', IncidentMid.index(), IncidentController.index)
+routes.post('/incidents', IncidentMid.create(), AuthMid, IncidentController.create)
+routes.delete('/incidents/:id', IncidentMid.delete(), AuthMid, IncidentController.delete)
+
+
+module.exports = routes
