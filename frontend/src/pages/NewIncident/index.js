@@ -1,68 +1,79 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import './styles.css';
-import logoImg from '../../assets/logo.svg';
-import { Link, useHistory } from 'react-router-dom';
-import { FiArrowLeft } from 'react-icons/fi';
-import api from '../../services/api';
+import { Link, useHistory } from 'react-router-dom'
+import { FiArrowLeft } from 'react-icons/fi'
+
+import api from '../../services/api'
+
+import './styles.css'
+
+import logoImg from '../../assets/logo.svg'
 
 export default function NewIncident() {
-    const [title, setTitle] = useState('');
-    const [description, setDescrioption] = useState('');
-    const [value, setValue] = useState('');
-    const ongId = localStorage.getItem('ongId');
-    const history = useHistory();
+    const [title, setTitle] = useState('')
+    const [description, setDecription] = useState('')
+    const [value, setValue] = useState('')
+
+    const ongId = localStorage.getItem('ongId')
+
+    const history = useHistory()
 
     async function handleNewIncident(e) {
-        e.preventDefault();
+        e.preventDefault()
+
         const data = {
             title,
             description,
             value
-        };
+        }
 
         try {
-            await api.post('incidents', data, {
+            await api.post('/incidents', data, {
                 headers: {
-                    Authorization: ongId,
+                    Authorization: ongId
                 }
-            });
+            })
 
-            history.push('/profile');
-        } catch (err) {
-            alert('Erro ao cadastrar caso, tente novamente.')
+            history.push('/profile')
+        } catch (err){
+            alert('Erro ao cadastrar caso, tente novamente')
         }
-    }
+    }   
 
-    return(
+    return (
         <div className="new-incident-container">
             <div className="content">
                 <section>
-                    <img src={logoImg} alt="Be The Hero"/>
+                    <img src={logoImg} alt="Be The Hero" />
+
                     <h1>Cadastrar novo caso</h1>
-                    <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
+
+                    <p>Descreva o caso detalhadamente para encontrar o heroi para resolver isso. </p>
+
                     <Link className="back-link" to="/profile">
-                        <FiArrowLeft size={16} color="#E02041"/>
+                        <FiArrowLeft size={16} color="#E02041" />
                         Voltar para home
                     </Link>
                 </section>
+
                 <form onSubmit={handleNewIncident}>
-                    <input
+                    <input 
                         placeholder="Título do caso"
-                        values={title}
+                        value={title}
                         onChange={e => setTitle(e.target.value)}
                     />
-                    <textarea
+                    <textarea 
                         placeholder="Descrição"
-                        values={description}
-                        onChange={e => setDescrioption(e.target.value)}
+                        value={description}
+                        onChange={e => setDecription(e.target.value)}
                     />
-                    <input
+                    <input 
                         placeholder="Valor em reais"
-                        values={value}
+                        value={value}
                         onChange={e => setValue(e.target.value)}
                     />
-                    <button className="button" type="submit">Cadastrar</button>
+
+                    <button className="button">Cadastrar</button>
                 </form>
             </div>
         </div>

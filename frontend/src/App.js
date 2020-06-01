@@ -1,13 +1,13 @@
-import React from 'react';
-import './global.css';
-import Routes from './routes';
+import React from 'react'
 
-/**JSX: JavaScript XML */
+import Routes from './routes'
 
-function App() {
+import './global.css'
+
+function App() { 
   return (
     <Routes />
-  );
+  )
 }
 
-export default App;
+export default App
