@@ -110,7 +110,7 @@ In case you don't have an SSH key on your GitHub account, you can clone the proj
 - Celebrate
 - KnexJS
 
-### React.js (web)
+### ReactJS (web)
 - Axios
 
 ### React Native (mobile)
