@@ -1,26 +1,26 @@
 <br />
 
 <p align="center">
-  <img alt="Logo" src="./.github/logo.svg" width="130px" />
+  <img alt="Logo" src="./.github/logo.svg" width="180px" />
 </p>
 
 <h1 align="center" style="text-align: center;">Be The Hero</h1>
 
 <p align="center">
 	<a href="https://github.com/LuizFerK">
-		<img alt="Author" src="https://img.shields.io/badge/author-Luiz%20Fernando-FF872C?style=flat" />
+		<img alt="Author" src="https://img.shields.io/badge/author-Luiz%20Fernando-E02041?style=flat" />
 	</a>
 	<a href="#">
-		<img alt="Languages" src="https://img.shields.io/github/languages/count/LuizFerK/BeTheHero?color=%23FF872C&style=flat-" />
+		<img alt="Languages" src="https://img.shields.io/github/languages/count/LuizFerK/BeTheHero?color=%23E02041&style=flat-" />
 	</a>
 	<a href="hhttps://github.com/LuizFerK/BeTheHero/stargazers">
-		<img alt="Stars" src="https://img.shields.io/github/stars/LuizFerK/BeTheHero?color=FF872C&style=flat" />
+		<img alt="Stars" src="https://img.shields.io/github/stars/LuizFerK/BeTheHero?color=E02041&style=flat" />
 	</a>
 	<a href="https://github.com/LuizFerK/BeTheHero/network/members">
-		<img alt="Forks" src="https://img.shields.io/github/forks/LuizFerK/BeTheHero?color=%23FF872C&style=flat" />
+		<img alt="Forks" src="https://img.shields.io/github/forks/LuizFerK/BeTheHero?color=%23E02041&style=flat" />
 	</a>
 	<a href="https://github.com/LuizFerK/BeTheHero/graphs/contributors">
-		<img alt="Contributors" src="https://img.shields.io/github/contributors/LuizFerK/BeTheHero?color=FF872C&style=flat" />
+		<img alt="Contributors" src="https://img.shields.io/github/contributors/LuizFerK/BeTheHero?color=E02041&style=flat" />
 	</a>
 </p>
 
@@ -33,7 +33,10 @@
 <br />
 
 <p align="center">
-  <img alt="Home" src="./.github/heroes.png" />
+  <img alt="Home" src="./.github/home.png" />
+  <img alt="Dashboard" src="./.github/dashboard.png" />
+  <img alt="Incidents" src="./.github/incidents.png" width="300px" />
+  <img alt="Details" src="./.github/details.png" width="300px" />
 </p>
 
 <br />
@@ -77,7 +80,7 @@ In case you don't have an SSH key on your GitHub account, you can clone the proj
 
 ```git clone https://github.com/LuizFerK/BeTheHero.git```
 
-**Both of this commands will generates a folder called BeTheHero, with all the project**
+**Both of these commands will generate a folder called BeTheHero, with all the project**
 
 # :bulb: Getting started
 
